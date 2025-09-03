@@ -1,1 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+@theme{
+    --font-roboto: Roboto, "sans-serif"
+}
+@layer base{
+    h3{
+        @apply font-bold text-xl mb-2;
+    }
+    body{
+        @apply font-roboto;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@layer components{
+    .endless-river{
+        @apply bg-gradient-to-r from-[#43cea2] to-[#185a9d];
+    }
+}
