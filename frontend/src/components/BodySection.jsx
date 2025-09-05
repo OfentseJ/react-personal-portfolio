@@ -10,8 +10,11 @@ export default function BodySection() {
           <p className="text-[#43cea2]">Programmer</p>
         </div>
       </section>
-      <section id="about-me" className="endless-river items-center space-y-8">
-        <div className="flex flex-col px-10">
+      <section
+        id="about-me"
+        className="endless-river items-center space-y-8 py-20"
+      >
+        <div className="flex flex-col px-10 ">
           <h1>About Me</h1>
           <div className=" p-6 rounded-2xl border-2 max-w-4xl m-auto">
             <p>
@@ -65,7 +68,6 @@ export default function BodySection() {
             <ul>
               <li>PostgreSQL</li>
               <li>MongoDB</li>
-              <li>SQLite</li>
             </ul>
           </div>
           <div>
@@ -79,7 +81,7 @@ export default function BodySection() {
           </div>
         </div>
       </section>
-      <section id="education" className=" endless-river p-10">
+      <section id="education" className=" endless-river px-10 py-20">
         <h1>Education</h1>
         <div className="flex flex-wrap flex-row gap-8 items-center justify-center mt-4">
           <div className="borderedDivs">
@@ -102,9 +104,9 @@ export default function BodySection() {
           </div>
         </div>
       </section>
-      <section id="certifications" className="endless-river px-10">
+      <section id="certifications" className="endless-river px-10 py-20 ">
         <h1>Certifications</h1>
-        <div className="flex justify-center items-center pt-4">
+        <div className="flex justify-center items-center pt-4 ">
           <div className="borderedDivs mb-10 w-5xl flex gap-6">
             <div>
               <h3>Microsoft</h3>
@@ -141,6 +143,42 @@ export default function BodySection() {
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects" className="endless-river px-10 py-20">
+        <h1>Projects</h1>
+        <div className="flex gap-4 flex-wrap items-center justify-center pt-6">
+          <div className="borderedDivs w-sm">
+            <h3>Banking App Backend</h3>
+            <p>
+              A backend system that performs CRUD operations on users. User
+              information is stored in a JSON file as the database.
+            </p>
+            <a>Click here to view</a>
+          </div>
+          <div className="borderedDivs w-sm">
+            <h3>Rick & Morty API</h3>
+            <p>View characters found on the Rick & Morty TV Series.</p>
+            <a>Click here to view</a>
+          </div>
+          <div className="borderedDivs w-sm">
+            <h3>Technical Documentation</h3>
+            <p>Python API Documentation. Built using html and css.</p>
+            <a>Click here to view</a>
+          </div>
+          <div className="borderedDivs w-sm">
+            <h3>All-Goods</h3>
+            <p>
+              E-Commerce website Built using Java, Glassfish and Derby for the
+              database.
+            </p>
+            <a>Click here to view</a>
+          </div>
+          <div className="borderedDivs w-sm">
+            <h3>Thriftville</h3>
+            <p>E-commerce store. Bulit using django, html and css.</p>
+            <a>Click here to view</a>
           </div>
         </div>
       </section>
