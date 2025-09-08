@@ -1,6 +1,6 @@
 import image from "../assets/static/IMG_2189.JPEG";
 import cv from "../assets/docs/Ofentse CV.pdf";
-import React from "react";
+import ContactForm from "./ContactForm";
 import { useForm, ValidationError } from "@formspree/react";
 
 export default function BodySection() {
@@ -125,36 +125,51 @@ export default function BodySection() {
             <div>
               <h3>Microsoft</h3>
               <div className="flex flex-col ml-4">
-                <a
-                  href="https://learn.microsoft.com/api/credentials/share/en-us/OfentseMakhutja-8865/680FECAF141D66F9?sharingId"
-                  target="_blank"
-                >
-                  - AZ-900 <i class="ri-external-link-line"></i>
-                </a>
-                <a
-                  href=" https://learn.microsoft.com/api/credentials/share/en-us/OfentseMakhutja-8865/43E1BBFB203FF580?sharingId "
-                  target="_blank"
-                >
-                  - DP-900 <i class="ri-external-link-line"></i>
-                </a>
+                <span>
+                  - AZ-900
+                  <a
+                    href="https://learn.microsoft.com/api/credentials/share/en-us/OfentseMakhutja-8865/680FECAF141D66F9?sharingId"
+                    target="_blank"
+                  >
+                    {" "}
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </span>
+                <span>
+                  - DP-900
+                  <a
+                    href=" https://learn.microsoft.com/api/credentials/share/en-us/OfentseMakhutja-8865/43E1BBFB203FF580?sharingId "
+                    target="_blank"
+                  >
+                    {" "}
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </span>
               </div>
             </div>
             <div>
               <h3>freeCodeCamp</h3>
               <div className="flex flex-col ml-4">
-                <a
-                  href="https://www.freecodecamp.org/certification/ofentsemakhutja/responsive-web-design"
-                  target="_blank"
-                >
-                  - Responsive Web Design <i class="ri-external-link-line"></i>
-                </a>
-                <a
-                  href="https://www.freecodecamp.org/certification/ofentsemakhutja/javascript-algorithms-and-data-structures-v8"
-                  target="_blank"
-                >
-                  - JavaScript Algoriths and Data Structuse{" "}
-                  <i class="ri-external-link-line"></i>
-                </a>
+                <span>
+                  - Responsive Web Design
+                  <a
+                    href="https://www.freecodecamp.org/certification/ofentsemakhutja/responsive-web-design"
+                    target="_blank"
+                  >
+                    {" "}
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </span>
+                <span>
+                  - JavaScript Algoriths and Data Structuse
+                  <a
+                    href="https://www.freecodecamp.org/certification/ofentsemakhutja/javascript-algorithms-and-data-structures-v8"
+                    target="_blank"
+                  >
+                    {" "}
+                    <i class="ri-external-link-line"></i>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -225,47 +240,7 @@ export default function BodySection() {
         <h1>Contacts</h1>
         <div className="pl-10 pt-10 flex flex-col items-center justify-center">
           <h2 className="font-bold text-2xl">Send me a Message</h2>
-          <form class="flex flex-col gap-4 mt-10" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
-              className="border-none focus:outline-amber-50 p-2 rounded-2xl outline-2"
-            />
-            <ValidationError prefix="Name" field="name" errors={state.errors} />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              className="border-none focus:outline-amber-50 p-2 rounded-2xl outline-2"
-            />
-            <ValidationError
-              prefix="Email"
-              field="email"
-              errors={state.errors}
-            />
-            <textarea
-              name="message"
-              id="message"
-              placeholder="Message"
-              className="border-none focus:outline-amber-50 p-2 rounded-2xl w-lg h-50 outline-2"
-            ></textarea>
-            <ValidationError
-              prefix="Message"
-              field="message"
-              errors={state.errors}
-            />
-            <button
-              onClick={clear}
-              disabled={state.submitting}
-              type="submit"
-              className="hover:cursor-pointer border-amber-100 hover:text-black border-2 w-4xs p-2 rounded-full bg-white font-bold text-[#43cea2]"
-            >
-              Send Message <i class="ri-send-plane-fill"></i>
-            </button>
-          </form>
+          <ContactForm />
           <h2 className="pt-10">Want to work together?</h2>
           <p className="text-[#43cea2] pb-4">Contact Me:</p>
           <div class="flex flex-col">
