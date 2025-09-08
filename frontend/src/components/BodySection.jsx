@@ -1,19 +1,33 @@
 import image from "../assets/static/IMG_2189.JPEG";
+import cv from "../assets/docs/Ofentse CV.pdf";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 export default function BodySection() {
+  const [state, handleSubmit] = useForm("xjkepzlb");
+  if (state.succeeded) {
+    return <p>Thanks for joining!</p>;
+  }
+
+  const clear = () => {
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const messageTextArea = document.getElementById("message");
+
+    nameInput.value = "";
+    emailInput.value = "";
+    messageTextArea.value = "";
+  };
   return (
     <>
-      <section className="pt-30 endless-river min-h-[100vh] space-y-3 flex items-center flex-col">
+      <section className="pt-30 min-h-[100vh] space-y-3 flex items-center flex-col">
         <img src={image} className="rounded-full size-60 mb-8 " />
         <div className="font-bold text-xl flex items-center flex-col ">
           <p>Hey😁👋, I'm Ofentse Makhutja</p>
           <p className="text-[#43cea2]">Programmer</p>
         </div>
       </section>
-      <section
-        id="about-me"
-        className="endless-river items-center space-y-8 py-20"
-      >
+      <section id="about-me" className=" items-center space-y-8 py-20">
         <div className="flex flex-col px-10 ">
           <h1>About Me</h1>
           <div className=" p-6 rounded-2xl border-2 max-w-4xl m-auto">
@@ -81,7 +95,7 @@ export default function BodySection() {
           </div>
         </div>
       </section>
-      <section id="education" className=" endless-river px-10 py-20">
+      <section id="education" className="px-10 py-20">
         <h1>Education</h1>
         <div className="flex flex-wrap flex-row gap-8 items-center justify-center mt-4">
           <div className="borderedDivs">
@@ -104,9 +118,9 @@ export default function BodySection() {
           </div>
         </div>
       </section>
-      <section id="certifications" className="endless-river px-10 py-20 ">
+      <section id="certifications" className="px-10 py-20 ">
         <h1>Certifications</h1>
-        <div className="flex justify-center items-center pt-4 ">
+        <div className="flex justify-center items-center pt-4">
           <div className="borderedDivs mb-10 w-5xl flex gap-6">
             <div>
               <h3>Microsoft</h3>
@@ -146,7 +160,7 @@ export default function BodySection() {
           </div>
         </div>
       </section>
-      <section id="projects" className="endless-river px-10 py-20">
+      <section id="projects" className="px-10 py-20">
         <h1>Projects</h1>
         <div className="flex gap-4 flex-wrap items-center justify-center pt-6">
           <div className="borderedDivs w-sm">
@@ -155,17 +169,32 @@ export default function BodySection() {
               A backend system that performs CRUD operations on users. User
               information is stored in a JSON file as the database.
             </p>
-            <a>Click here to view</a>
+            <a
+              href="https://github.com/OfentseJ/node-react-banking-app"
+              target="_blank"
+            >
+              Click here to view
+            </a>
           </div>
           <div className="borderedDivs w-sm">
             <h3>Rick & Morty API</h3>
             <p>View characters found on the Rick & Morty TV Series.</p>
-            <a>Click here to view</a>
+            <a
+              href="https://ofentsej.github.io/rick---morty-characters/"
+              target="_blank"
+            >
+              Click here to view
+            </a>
           </div>
           <div className="borderedDivs w-sm">
             <h3>Technical Documentation</h3>
             <p>Python API Documentation. Built using html and css.</p>
-            <a>Click here to view</a>
+            <a
+              href="https://github.com/OfentseJ/technical-documentation.git"
+              target="_blank"
+            >
+              Click here to view
+            </a>
           </div>
           <div className="borderedDivs w-sm">
             <h3>All-Goods</h3>
@@ -173,15 +202,109 @@ export default function BodySection() {
               E-Commerce website Built using Java, Glassfish and Derby for the
               database.
             </p>
-            <a>Click here to view</a>
+            <a
+              href="https://github.com/OfentseJ/all-goods-homework"
+              target="_blank"
+            >
+              Click here to view
+            </a>
           </div>
           <div className="borderedDivs w-sm">
             <h3>Thriftville</h3>
             <p>E-commerce store. Bulit using django, html and css.</p>
-            <a>Click here to view</a>
+            <a
+              href="https://github.com/OfentseJ/Thriftville.git"
+              target="_blank"
+            >
+              Click here to view
+            </a>
           </div>
         </div>
       </section>
+      <section id="contacts" className="px-10 py-20">
+        <h1>Contacts</h1>
+        <div className="pl-10 pt-10 flex flex-col items-center justify-center">
+          <h2 className="font-bold text-2xl">Send me a Message</h2>
+          <form class="flex flex-col gap-4 mt-10" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Name"
+              className="border-none focus:outline-amber-50 p-2 rounded-2xl outline-2"
+            />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              className="border-none focus:outline-amber-50 p-2 rounded-2xl outline-2"
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message"
+              className="border-none focus:outline-amber-50 p-2 rounded-2xl w-lg h-50 outline-2"
+            ></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+            <button
+              onClick={clear}
+              disabled={state.submitting}
+              type="submit"
+              className="hover:cursor-pointer border-amber-100 hover:text-black border-2 w-4xs p-2 rounded-full bg-white font-bold text-[#43cea2]"
+            >
+              Send Message <i class="ri-send-plane-fill"></i>
+            </button>
+          </form>
+          <h2 className="pt-10">Want to work together?</h2>
+          <p className="text-[#43cea2] pb-4">Contact Me:</p>
+          <div class="flex flex-col">
+            <a
+              href="mailto:ofentsemakhutja@icloud.com"
+              target="_blank"
+              id="profile-link"
+            >
+              <i class="ri-mail-line"></i> ofentsemakhutja@icloud.com
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ofentse-makhutja-13b4112a2/"
+              target="_blank"
+              id="profile-link"
+            >
+              <i class="ri-linkedin-fill"></i> LinkedIn
+            </a>
+            <a
+              href="https://github.com/OfentseJ"
+              target="_blank"
+              id="profile-link"
+            >
+              <i class="ri-github-fill"></i> github
+            </a>
+            <a href="tel:061 446 7573" target="_blank" id="profile-link">
+              <i class="ri-phone-fill"></i> 061 446 7573
+            </a>
+            <a href={cv} download class="download-btn" target="_blank">
+              <i class="ri-file-download-line"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </section>
+      <footer className="endless-river flex justify-center items-center p-4 border-t-2">
+        <p>
+          <i className="ri-copyright-line"></i>2025 Ofentse Makhutja. All rights
+          reserved
+        </p>
+      </footer>
     </>
   );
 }
