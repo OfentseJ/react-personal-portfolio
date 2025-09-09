@@ -9,25 +9,19 @@ export default function BodySection() {
     return <p>Thanks for joining!</p>;
   }
 
-  const clear = () => {
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const messageTextArea = document.getElementById("message");
-
-    nameInput.value = "";
-    emailInput.value = "";
-    messageTextArea.value = "";
-  };
   return (
     <>
-      <section className="pt-30 min-h-[100vh] space-y-3 flex items-center flex-col">
+      <section className="endless-river pt-30 min-h-[100vh] space-y-3 flex items-center flex-col">
         <img src={image} className="rounded-full size-60 mb-8 " />
         <div className="font-bold text-xl flex items-center flex-col ">
           <p>Hey😁👋, I'm Ofentse Makhutja</p>
-          <p className="text-[#43cea2]">Programmer</p>
+          <p className="text-[#43cea2]">Full Stack Developer</p>
         </div>
       </section>
-      <section id="about-me" className=" items-center space-y-8 py-20">
+      <section
+        id="about-me"
+        className="endless-river items-center space-y-8 py-20"
+      >
         <div className="flex flex-col px-10 ">
           <h1>About Me</h1>
           <div className=" p-6 rounded-2xl border-2 max-w-4xl m-auto">
@@ -95,7 +89,7 @@ export default function BodySection() {
           </div>
         </div>
       </section>
-      <section id="education" className="px-10 py-20">
+      <section id="education" className="endless-river px-10 py-20">
         <h1>Education</h1>
         <div className="flex flex-wrap flex-row gap-8 items-center justify-center mt-4">
           <div className="borderedDivs">
@@ -118,7 +112,7 @@ export default function BodySection() {
           </div>
         </div>
       </section>
-      <section id="certifications" className="px-10 py-20 ">
+      <section id="certifications" className="endless-river px-10 py-20 ">
         <h1>Certifications</h1>
         <div className="flex justify-center items-center pt-4">
           <div className="borderedDivs mb-10 w-5xl flex gap-6">
@@ -175,7 +169,7 @@ export default function BodySection() {
           </div>
         </div>
       </section>
-      <section id="projects" className="px-10 py-20">
+      <section id="projects" className="endless-river px-10 py-20">
         <h1>Projects</h1>
         <div className="flex gap-4 flex-wrap items-center justify-center pt-6">
           <div className="borderedDivs w-sm">

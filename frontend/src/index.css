@@ -19,7 +19,7 @@
         @apply text-zinc-100 ;
     }
     a{
-        @apply hover:text-zinc-700
+        @apply hover:text-slate-600
     }
 }
 
@@ -27,7 +27,13 @@
     .endless-river{
         @apply bg-gradient-to-r from-[#43cea2] to-[#185a9d];
     }
+    .bg-white-cyan{
+        @apply bg-gradient-to-b from-[#4a33cc] to-[#43cea2];
+    }
     .borderedDivs{
         @apply border-2 p-5 rounded-2xl space-y-2;
+    }
+    .inverse{
+        @apply bg-white text-[#43cea2]
     }
 }

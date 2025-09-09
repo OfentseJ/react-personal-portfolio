@@ -6,28 +6,30 @@ export default function ContactForm() {
     return <p>Thanks for joining!</p>;
   }
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 mt-8">
-      <label htmlFor="email">Email Address</label>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 mt-8">
+      <label htmlFor="email">Email Address:</label>
       <input
         id="email"
         type="email"
         name="email"
-        className="bg-amber-50 text-black focus:outline-0 p-1 w-xs rounded-lg"
+        required
+        className="bg-amber-50 text-slate-700 font-medium focus:outline-0 p-2 w-xs rounded-lg"
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
-      <label htmlFor="email">Message</label>
+      <label htmlFor="email">Message:</label>
       <textarea
         id="message"
         name="message"
-        className="bg-amber-50 text-black focus:outline-0 p-1 rounded-lg resize-none"
+        required
+        className="bg-amber-50 text-slate-700 font-medium focus:outline-0 p-2 rounded-lg h-[128px] resize-none"
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
       <button
         type="submit"
         disabled={state.submitting}
-        className="border-4 rounded-lg"
+        className="border-2 rounded-lg mt-4 p-2 hover:.inverse"
       >
-        Submit
+        Send Message <i class="ri-send-plane-fill"></i>
       </button>
     </form>
   );
