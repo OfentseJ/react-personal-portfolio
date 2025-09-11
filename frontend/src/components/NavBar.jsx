@@ -23,6 +23,7 @@ export default function NavBar() {
                   ? "top-[80px] opacity-100 endless-river shadow-2xl flex flex-col items-center gap-2"
                   : "top-[-400px] opacity-0 bg-transparent shodow-none"
               }`}
+        onClick={() => setOpen(!open)}
       >
         <li>
           <a href="#about-me" className="text-xl duration-500 mx-4">
