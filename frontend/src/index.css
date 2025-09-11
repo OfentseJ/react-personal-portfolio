@@ -19,7 +19,7 @@
         @apply text-zinc-100 ;
     }
     a{
-        @apply hover:text-slate-600
+        @apply hover:text-[#43cea2]
     }
 }
 

@@ -20,7 +20,7 @@ export default function NavBar() {
               transition-all ease-in duration-500 mt-[-8px]
               ${
                 open
-                  ? "top-[80px] opacity-100 endless-river shadow-2xl"
+                  ? "top-[80px] opacity-100 endless-river shadow-2xl flex flex-col items-center gap-2"
                   : "top-[-400px] opacity-0 bg-transparent shodow-none"
               }`}
       >

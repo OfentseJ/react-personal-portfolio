@@ -16,6 +16,15 @@ export default function BodySection() {
         <div className="font-bold text-xl flex items-center flex-col ">
           <p>Hey😁👋, I'm Ofentse Makhutja</p>
           <p className="text-[#43cea2]">Full Stack Developer</p>
+          <a
+            href={cv}
+            download
+            target="_blank"
+            className="border-2 p-2 mt-4 rounded-2xl"
+          >
+            {" "}
+            Download CV
+          </a>
         </div>
       </section>
       <section
@@ -232,7 +241,7 @@ export default function BodySection() {
       </section>
       <section id="contacts" className="px-10 py-20">
         <h1>Contacts</h1>
-        <div className="pl-10 pt-10 flex flex-col items-center justify-center">
+        <div className="pt-10 flex flex-col items-center justify-center">
           <h2 className="font-bold text-2xl">Send me a Message</h2>
           <ContactForm />
           <h2 className="pt-10">Want to work together?</h2>
