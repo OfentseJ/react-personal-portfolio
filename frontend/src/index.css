@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme{
     --font-roboto: Roboto, "sans-serif"
 }
@@ -16,7 +19,7 @@
     }
     html {
         scroll-behavior: smooth;
-        @apply text-zinc-100 ;
+        @apply text-zinc-100 ;       
     }
     a{
         @apply hover:text-[#43cea2]
@@ -27,8 +30,8 @@
     .endless-river{
         @apply bg-gradient-to-r from-[#43cea2] to-[#185a9d];
     }
-    .bg-white-cyan{
-        @apply bg-gradient-to-b from-[#4a33cc] to-[#43cea2];
+    .dark .endless-river{
+        @apply bg-gradient-to-r from-[#0f2027] to-[#203a43];
     }
     .borderedDivs{
         @apply border-2 p-5 rounded-2xl space-y-2;

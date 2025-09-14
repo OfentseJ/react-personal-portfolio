@@ -75,8 +75,7 @@ export default function BodySection() {
                 <i class="ri-javascript-fill"></i> JavaScript
               </li>
               <li>
-                <i class="ri-nodejs-fill"></i>
-                Node.js
+                <i class="ri-nodejs-fill"></i> Node.js
               </li>
             </ul>
           </div>
