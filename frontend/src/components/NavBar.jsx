@@ -1,9 +1,18 @@
-import { useState } from "react";
-import { Moon, Sun } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Sun, Moon, Menu, X } from "lucide-react";
 
 export default function NavBar() {
-  const [open, setOpen] = useState(false);
   const [theme, setTheme] = useState("light");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -11,66 +20,98 @@ export default function NavBar() {
     document.documentElement.classList.toggle("dark", newTheme === "dark");
   };
 
-  return (
-    <nav className="p-5 h-18 md:flex md:items-center md:justify-between fixed w-full endless-river shadow-2xl">
-      <div className="flex justify-between items-center">
-        <span className="font-bold text-2xl cursor-pointer">Ofentse.</span>
-        <span
-          className="text-3xl cursor-pointer mx-2 md:hidden block"
-          onClick={() => setOpen(!open)}
-        >
-          <i className={open ? "ri-close-large-line" : "ri-menu-line"}></i>
-        </span>
-      </div>
-      <ul
-        className={`
-    md:flex md:items-center md:static md:w-auto md:opacity-100
-    absolute left-0 w-full py-4 pl-7 transition-all ease-in duration-500 mt-[-8px]
+  const links = [
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "education", label: "Education" },
+    { id: "certifications", label: "Certifications" },
+    { id: "projects", label: "Projects" },
+    { id: "contact", label: "Contact" },
+  ];
 
-    ${
-      open
-        ? "top-[80px] opacity-100 endless-river shadow-2xl flex flex-col items-center gap-2"
-        : "top-[-400px] opacity-0 bg-transparent shadow-none"
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+      setMenuOpen(false);
     }
+  };
 
-    md:top-auto md:opacity-100 md:shadow-none md:bg-transparent md:flex-row md:gap-6
-  `}
-        onClick={() => setOpen(false)}
-      >
-        <li>
+  return (
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-lg"
+          : "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+        <button
+          onClick={() => scrollToSection("home")}
+          className="text-xl font-bold bg-gradient-to-r from-[#43cea2] to-[#185a9d] bg-clip-text text-transparent hover:scale-105 transition-transform"
+        >
+          Ofentse Makhutja
+        </button>
+
+        {/* Desktop Menu */}
+        <div className="hidden md:flex items-center gap-8">
+          {links.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => scrollToSection(link.id)}
+              className="cursor-pointer hover:text-[#43cea2] transition-colors duration-200 font-medium relative group"
+            >
+              {link.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#43cea2] transition-all duration-300 group-hover:w-full"></span>
+            </button>
+          ))}
           <button
             onClick={toggleTheme}
-            className="pr-2 pt-2 cursor-pointer hover:text-[#43cea2] duration-500"
+            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
           >
-            {theme === "light" ? <Moon /> : <Sun />}
+            {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
           </button>
-        </li>
-        <li>
-          <a href="#about-me" className="text-xl duration-500 mx-4">
-            About Me
-          </a>
-        </li>
-        <li>
-          <a href="#education" className="text-xl duration-500 mx-4">
-            Education
-          </a>
-        </li>
-        <li>
-          <a href="#certifications" className="text-xl duration-500 mx-4">
-            Certifications
-          </a>
-        </li>
-        <li>
-          <a href="#projects" className="text-xl duration-500 mx-4">
-            Projects
-          </a>
-        </li>
-        <li>
-          <a href="#contacts" className="text-xl duration-500 mx-4">
-            Contacts
-          </a>
-        </li>
-      </ul>
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+          <div className="px-6 py-4 flex flex-col gap-4">
+            {links.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="text-left cursor-pointer hover:text-[#43cea2] transition-colors py-2 font-medium"
+              >
+                {link.label}
+              </button>
+            ))}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center gap-2 py-2 font-medium hover:text-[#43cea2] transition-colors"
+            >
+              {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
+              <span>{theme === "light" ? "Dark Mode" : "Light Mode"}</span>
+            </button>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
