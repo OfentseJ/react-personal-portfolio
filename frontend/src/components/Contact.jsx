@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Mail, Linkedin, Github, Phone, Send, CheckCircle } from "lucide-react";
+import cv from "../assets/docs/Ofentse CV.pdf";
 
 export default function Contact() {
   const [formData, setFormData] = useState({ email: "", message: "" });
@@ -184,7 +185,7 @@ export default function Contact() {
             {/* Download CV Button */}
             <div className="pt-6">
               <a
-                href="/Ofentse_CV.pdf"
+                href={cv}
                 download
                 className="flex items-center justify-center gap-2 w-full px-6 py-4 border-2 border-[#43cea2] text-[#43cea2] rounded-xl font-medium hover:bg-[#43cea2] hover:text-white transition-all duration-300"
               >

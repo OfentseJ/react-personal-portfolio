@@ -15,7 +15,7 @@ export default function Projects() {
       description:
         "View characters found on the Rick & Morty TV Series. Interactive character browser with search and filtering.",
       tech: ["JavaScript", "API", "HTML", "CSS"],
-      link: "https://ofentsej.github.io/rick---morty-characters/",
+      link: "https://github.com/OfentseJ/rick---morty-characters",
       demo: "https://ofentsej.github.io/rick---morty-characters/",
       color: "from-green-400 to-green-600",
     },
@@ -42,6 +42,14 @@ export default function Projects() {
       tech: ["Django", "Python", "HTML", "CSS"],
       link: "https://github.com/OfentseJ/Thriftville.git",
       color: "from-pink-400 to-pink-600",
+    },
+    {
+      title: "PDF Book Reader",
+      description:
+        "PDF book reader. Built using Node.js, React and mysql to store the books. Features CRUD operations to Books.",
+      tech: ["React", "Tailwind", "Node.js"],
+      link: "https://github.com/OfentseJ/pdf-book-reader",
+      color: "from-yellow-400 to-yellow-600",
     },
   ];
 

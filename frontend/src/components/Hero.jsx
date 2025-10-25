@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Download, Github, Linkedin, Mail, Phone } from "lucide-react";
 import profile from "../assets/static/profile.JPEG";
+import cv from "../assets/docs/Ofentse CV.pdf";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -53,7 +54,7 @@ export default function Hero() {
                 View Projects
               </a>
               <a
-                href="/Ofentse_CV.pdf"
+                href={cv}
                 download
                 className="px-6 py-3 border-2 border-[#43cea2] text-[#43cea2] rounded-lg font-medium hover:bg-[#43cea2] hover:text-white transition-all duration-300 flex items-center gap-2"
               >
@@ -109,13 +110,6 @@ export default function Hero() {
                 className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-full shadow-2xl"
               />
             </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="flex justify-center mt-16 animate-bounce">
-          <div className="w-6 h-10 border-2 border-[#43cea2] rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-[#43cea2] rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </div>
