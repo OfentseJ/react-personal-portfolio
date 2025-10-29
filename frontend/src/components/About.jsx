@@ -15,7 +15,7 @@ export default function About() {
     {
       category: "Database",
       icon: <Database className="w-6 h-6" />,
-      items: ["PostgreSQL", "MongoDB"],
+      items: ["PostgreSQL", "MongoDB", "MySQL"],
     },
     {
       category: "Soft Skills",
