@@ -2,14 +2,14 @@ import { ExternalLink, Github } from "lucide-react";
 
 export default function Projects() {
   const projects = [
-     {
+    {
       title: "PDF Book Reader",
       description:
         "PDF book reader. Built using Node.js, React and mysql to store the books. Features CRUD operations to Books.",
       tech: ["React", "Tailwind", "Node.js"],
       link: "https://github.com/OfentseJ/pdf-book-reader",
       demo: "https://pdf-reader-frontend.onrender.com/",
-      color: "from-yellow-400 to-yellow-600",
+      color: "from-blue-400 to-blue-600",
     },
     {
       title: "Banking App Backend",
@@ -17,7 +17,7 @@ export default function Projects() {
         "A backend system that performs CRUD operations on users. User information is stored in a JSON file as the database.",
       tech: ["Node.js", "Express", "JSON"],
       link: "https://github.com/OfentseJ/node-react-banking-app",
-      color: "from-blue-400 to-blue-600",
+      color: "from-yellow-400 to-yellow-600",
     },
     {
       title: "Rick & Morty API",
