@@ -29,11 +29,12 @@ export default function Projects() {
       color: "from-green-400 to-green-600",
     },
     {
-      title: "Technical Documentation",
+      title: "FPL Squad Craft",
       description:
-        "Python API Documentation. Built using HTML and CSS with responsive design and clear navigation.",
-      tech: ["HTML", "CSS", "Documentation"],
-      link: "https://github.com/OfentseJ/technical-documentation.git",
+        "Get live statistics, current transfer trends, including a squad builder. The Squad builder allows users to build or import their current squard from fpl.",
+      tech: ["React", "Vite", "Api"],
+      link: "https://github.com/OfentseJ/fpl-squad-craft.git",
+      demo: "https://ofentsej.github.io/fpl-squad-craft/",
       color: "from-purple-400 to-purple-600",
     },
     {
