@@ -1,4 +1,3 @@
-import React from "react";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -16,6 +15,9 @@ export default function App() {
         <section id="home">
           <Hero />
         </section>
+        <section id="projects">
+          <Projects />
+        </section>
         <section id="about">
           <About />
         </section>
@@ -24,9 +26,6 @@ export default function App() {
         </section>
         <section id="certifications">
           <Certifications />
-        </section>
-        <section id="projects">
-          <Projects />
         </section>
         <section id="contact">
           <Contact />

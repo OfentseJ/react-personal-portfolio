@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Sun, Moon, Menu, X } from "lucide-react";
 
 export default function NavBar() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("dark");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -22,10 +22,10 @@ export default function NavBar() {
 
   const links = [
     { id: "home", label: "Home" },
+    { id: "projects", label: "Projects" },
     { id: "about", label: "About" },
     { id: "education", label: "Education" },
     { id: "certifications", label: "Certifications" },
-    { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
   ];
 

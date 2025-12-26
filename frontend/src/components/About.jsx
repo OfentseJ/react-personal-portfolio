@@ -35,15 +35,9 @@ export default function About() {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="p-8 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I am a dedicated and enthusiastic programmer seeking a practical
-              opportunity to apply my knowledge of programming and
-              problem-solving in a professional setting. With proficiency in
-              Java and a strong willingness to learn emerging technologies, I am
-              particularly drawn to the fields of web and software development.
-              I am committed to making meaningful contributions to projects,
-              collaborating with experienced professionals, and continuously
-              advancing my technical and professional skills in a dynamic work
-              environment.
+              I'm a Full Stack Developer with strong programming knowledge, I'm
+              particularly drawn to the field of building web applications and
+              have built multiple web based projects.
             </p>
           </div>
         </div>

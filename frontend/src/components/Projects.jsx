@@ -3,12 +3,21 @@ import { ExternalLink, Github } from "lucide-react";
 export default function Projects() {
   const projects = [
     {
+      title: "FPL Squad Craft",
+      description:
+        "Get live statistics, current transfer trends, including a squad builder. The Squad builder allows users to build or import their current squard from fpl.",
+      tech: ["React", "Vite", "Api"],
+      link: "https://github.com/OfentseJ/fpl-squad-craft.git",
+      demo: "https://fpl-squad-craft.vercel.app/",
+      color: "from-purple-400 to-purple-600",
+    },
+    {
       title: "PDF Book Reader",
       description:
         "PDF book reader. Built using Node.js, React and mysql to store the books. Features CRUD operations to Books.",
       tech: ["React", "Tailwind", "Node.js"],
       link: "https://github.com/OfentseJ/pdf-book-reader",
-      demo: "https://pdf-reader-frontend.onrender.com/",
+      demo: "https://pdf-book-reader-rho.vercel.app/",
       color: "from-blue-400 to-blue-600",
     },
     {
@@ -27,15 +36,6 @@ export default function Projects() {
       link: "https://github.com/OfentseJ/rick---morty-characters",
       demo: "https://ofentsej.github.io/rick---morty-characters/",
       color: "from-green-400 to-green-600",
-    },
-    {
-      title: "FPL Squad Craft",
-      description:
-        "Get live statistics, current transfer trends, including a squad builder. The Squad builder allows users to build or import their current squard from fpl.",
-      tech: ["React", "Vite", "Api"],
-      link: "https://github.com/OfentseJ/fpl-squad-craft.git",
-      demo: "https://ofentsej.github.io/fpl-squad-craft/",
-      color: "from-purple-400 to-purple-600",
     },
     {
       title: "All-Goods",

@@ -27,7 +27,7 @@ export default function Hero() {
           >
             <div className="space-y-2">
               <p className="text-lg text-gray-600 dark:text-gray-400 font-medium">
-                Hey 😁👋, I'm
+                Hey, I'm
               </p>
               <h1 className="text-4xl md:text-6xl font-bold">
                 <span className="bg-gradient-to-r from-[#43cea2] to-[#185a9d] bg-clip-text text-transparent">
@@ -40,9 +40,8 @@ export default function Hero() {
             </div>
 
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-              Passionate about building modern, efficient, and interactive web
-              applications. Currently pursuing my Diploma in Computer Science
-              with a focus on full-stack development.
+              Currently pursuing my Diploma in Computer Science with a focus on
+              full-stack development. I'm based in Midrand, Gauteng.
             </p>
 
             {/* CTA Buttons */}
