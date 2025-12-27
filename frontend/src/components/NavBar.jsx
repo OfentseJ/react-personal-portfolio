@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { Sun, Moon, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function NavBar() {
-  const [theme, setTheme] = useState("dark");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -14,18 +13,12 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
-    setTheme(newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
-  };
-
   const links = [
     { id: "home", label: "Home" },
-    { id: "projects", label: "Projects" },
     { id: "about", label: "About" },
     { id: "education", label: "Education" },
     { id: "certifications", label: "Certifications" },
+    { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -66,23 +59,17 @@ export default function NavBar() {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className="cursor-pointer hover:text-[#43cea2] transition-colors duration-200 font-medium relative group"
+              className="cursor-pointer hover:text-[#43cea2] transition-colors duration-200 font-medium relative group text-gray-700 dark:text-gray-200"
             >
               {link.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#43cea2] transition-all duration-300 group-hover:w-full"></span>
             </button>
           ))}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          >
-            {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-          </button>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+          className="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors text-gray-700 dark:text-gray-200"
           onClick={() => setMenuOpen(!menuOpen)}
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -97,18 +84,11 @@ export default function NavBar() {
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
-                className="text-left cursor-pointer hover:text-[#43cea2] transition-colors py-2 font-medium"
+                className="text-left cursor-pointer hover:text-[#43cea2] transition-colors py-2 font-medium text-gray-700 dark:text-gray-200"
               >
                 {link.label}
               </button>
             ))}
-            <button
-              onClick={toggleTheme}
-              className="flex items-center gap-2 py-2 font-medium hover:text-[#43cea2] transition-colors"
-            >
-              {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
-              <span>{theme === "light" ? "Dark Mode" : "Light Mode"}</span>
-            </button>
           </div>
         </div>
       )}
