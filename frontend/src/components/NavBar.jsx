@@ -15,10 +15,10 @@ export default function NavBar() {
 
   const links = [
     { id: "home", label: "Home" },
+    { id: "projects", label: "Projects" },
     { id: "about", label: "About" },
     { id: "education", label: "Education" },
     { id: "certifications", label: "Certifications" },
-    { id: "projects", label: "Projects" },
     { id: "contact", label: "Contact" },
   ];
 
