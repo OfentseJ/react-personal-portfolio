@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="text-center">
             <h4 className="font-semibold mb-3">Quick Links</h4>
             <div className="flex flex-col gap-2">
-              {["About", "Projects", "Contact"].map((link) => (
+              {["Projects", "About", "Contact"].map((link) => (
                 <button
                   key={link}
                   onClick={() => {

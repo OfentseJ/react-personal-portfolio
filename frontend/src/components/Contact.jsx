@@ -38,8 +38,8 @@ export default function Contact() {
     {
       icon: <Mail className="w-5 h-5" />,
       label: "Email",
-      value: "ofentsemakhutja@icloud.com",
-      href: "mailto:ofentsemakhutja@icloud.com",
+      value: "makhutjaofentse@gmail.com",
+      href: "mailto:makhutjaofentse@gmail.com",
     },
     {
       icon: <Linkedin className="w-5 h-5" />,

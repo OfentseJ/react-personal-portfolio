@@ -10,7 +10,7 @@ export default function About() {
     {
       category: "Backend",
       icon: <Code className="w-6 h-6" />,
-      items: ["Java", "JavaScript", "Node.js"],
+      items: ["Java", "JavaScript", "Node.js", "Laravel"],
     },
     {
       category: "Database",

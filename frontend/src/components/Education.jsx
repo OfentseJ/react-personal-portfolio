@@ -5,8 +5,8 @@ export default function Education() {
     {
       degree: "Diploma in Computer Science",
       institution: "Tshwane University of Technology",
-      period: "2022 - 2025",
-      status: "Currently Studying",
+      period: "2022 - 2026",
+      status: "Expected graduation",
       icon: <GraduationCap className="w-8 h-8" />,
     },
     {
