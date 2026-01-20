@@ -35,13 +35,13 @@ export default function Hero() {
                 </span>
               </h1>
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300">
-                Full Stack Developer
+                Software Developer
               </h2>
             </div>
 
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
               Currently pursuing my Diploma in Computer Science with a focus on
-              full-stack development. I'm based in Midrand, Gauteng.
+              Web development. I'm based in Midrand, Gauteng.
             </p>
 
             {/* CTA Buttons */}

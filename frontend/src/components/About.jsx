@@ -38,7 +38,7 @@ export default function About() {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="p-8 rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 shadow-lg hover:shadow-xl transition-shadow duration-300">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I’m a Full Stack Developer with a strong background in Java,
+              I’m a Software Developer with a strong background in Java,
               currently delving into web development to efficiently ship
               reliable, scalable code. I’ve built multiple full-stack, web-based
               projects and primarily work with the MERN stack.
