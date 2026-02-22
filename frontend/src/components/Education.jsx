@@ -17,10 +17,11 @@ export default function Education() {
       icon: <BookOpen className="w-8 h-8" />,
     },
     {
-      degree: "Business Support Systems Level 5",
+      degree: "Systems Support NQF L5",
       institution: "Dynamic DNA",
       period: "2024 - 2025",
-      status: "Learnership for work readiness program",
+      subjects:
+        "Assembling, Maintaining & Repairing a Server, LAN WAN & Network Arch, Client Server Networking, Personal Development",
       icon: <GraduationCap className="w-8 h-8" />,
     },
   ];
