@@ -29,12 +29,12 @@ export default function Projects() {
       color: "from-yellow-400 to-yellow-600",
     },
     {
-      title: "Rick & Morty API",
+      title: "Chess",
       description:
-        "View characters found on the Rick & Morty TV Series. Interactive character browser with search and filtering.",
-      tech: ["JavaScript", "API", "HTML", "CSS"],
-      link: "https://github.com/OfentseJ/rick---morty-characters",
-      demo: "https://ofentsej.github.io/rick---morty-characters/",
+        "Pass and play chess game. Users can play quick chess game from any device. Features state-managemant for the board.",
+      tech: ["JavaScript", "HTML", "CSS"],
+      link: "https://github.com/OfentseJ/chess-game",
+      demo: "https://ofentsej.github.io/chess-game/",
       color: "from-green-400 to-green-600",
     },
     {
