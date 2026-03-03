@@ -6,6 +6,7 @@ import Certifications from "./components/Certifications";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Experience from "./components/Experience";
 
 export default function App() {
   return (
@@ -14,6 +15,9 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-6">
         <section id="home">
           <Hero />
+        </section>
+        <section id="experience">
+          <Experience />
         </section>
         <section id="projects">
           <Projects />
