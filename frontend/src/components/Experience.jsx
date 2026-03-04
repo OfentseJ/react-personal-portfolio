@@ -3,7 +3,7 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 const experiences = [
   {
     company: "CYBAUG",
-    position: "Software Engineer Intern",
+    position: "Work Integrated Learning",
     location: "Pretoria, Gauteng",
     period: "Aug 2025 - Jan 2026",
     description: [
@@ -39,14 +39,13 @@ export default function Experience() {
 
         {/* Timeline Container */}
         <div className="relative">
-          {/* THE CONNECTING LINE: This div creates the continuous vertical line */}
           <div className="absolute left-0 top-2 bottom-2 w-0.5 bg-gray-200 dark:bg-gray-700"></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
               <div key={index} className="relative pl-8 group">
                 {/* Timeline Dot: Positioned exactly on the line */}
-                <div className="absolute -left-[7px] top-6 w-4 h-4 rounded-full bg-[#43cea2] shadow-[0_0_10px_#43cea2] z-10 transition-transform duration-300 group-hover:scale-125"></div>
+                <div className="absolute -left-[7px] top-2 w-4 h-4 rounded-full bg-[#43cea2] shadow-[0_0_10px_#43cea2] z-10 transition-transform duration-300 group-hover:scale-125"></div>
 
                 {/* The Card: Consistent with Projects.jsx */}
                 <div className="rounded-2xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 md:p-8 hover:border-[#43cea2] hover:shadow-xl transition-all duration-300">

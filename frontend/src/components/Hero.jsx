@@ -40,8 +40,8 @@ export default function Hero() {
             </div>
 
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl">
-              Currently pursuing my Diploma in Computer Science with a focus on
-              Web development. I'm based in Midrand, Gauteng.
+              Computer Science Graduate with a focus on Software development.
+              I'm based in Midrand, Gauteng.
             </p>
 
             {/* CTA Buttons */}
