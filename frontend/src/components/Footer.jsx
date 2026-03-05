@@ -35,7 +35,7 @@ export default function Footer() {
               Ofentse Makhutja
             </h3>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
-              Full Stack Developer
+              Software Developer
             </p>
           </div>
 
